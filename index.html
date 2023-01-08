@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./assets/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="./assets/style.css" type="text/css"/>
+    <title>Marvel Hero Quiz</title>
+  </head>
+  <body>
+<button style="width:150px" id="highscores">Highscores</button>
+<div id="highscorePage"></div>
+<div style="text-align:right" id="countdown"></div>
+<div style="text-align:center" class="quiz">
+    <h1 class="mainHeader">Marvel Hero Quiz!</h1>
+    <p id="mainIntro">How well do you know the marvel heros? Here are a few questions to test your marvel hero knowledge!</p>
+    <button id="startbtn">START</button>
+</div>
+<div styles="text-align:center" id="startquiz">
+</div>
+    <div id="initialsPage">
+        <p id="scoreTitle"> How did you do? score <span id="finalScore"></span></p>
+        <div id="initials">
+            Enter your initials: <input type="text" name="userInitials" id="userInitials">
+        </div>
+      <button id="submitInitials">SUBMIT</button>
+    <script src="./assets/script.js"></script>  
+    </body>
+</html>
