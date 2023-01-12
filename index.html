@@ -4,13 +4,15 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="./assets/reset.css" type="text/css"/>
     <link rel="stylesheet" href="./assets/style.css" type="text/css"/>
     <title>Marvel Hero Quiz</title>
   </head>
   <body>
 <button style="width:150px" id="highscores">Highscores</button>
-<div id="highscorepage"></div>
+<div id="highscorepage">
+  <div id="highscorename"></div>
+  <div id="highscore_score"></div>
+</div>
 <div style="text-align:right" id="countdown"></div>
 <div style="text-align:center" class="quiz">
     <h1 class="mainheader">Marvel Hero Quiz!</h1>
@@ -24,7 +26,7 @@
         <div id="initials">
             Enter your initials: <input type="text" name="userinitials" id="userinitials">
         </div>
-      <button id="submitInitials">SUBMIT</button>
+      <button  id="submitInitials">SUBMIT</button>
     <script src="./assets/script.js"></script>  
     </body>
 </html>

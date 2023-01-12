@@ -8,8 +8,10 @@ var finalscore = document.querySelector("#finalscore")
 var userinitials = document.querySelector("#userinitials")
 var initialsdiv = document.querySelector("#initials")
 var submitbtn = document.querySelector("#submitInitials")
-var highscore = document.querySelector("#highscore")
+var highscore = document.querySelector("#highscores")
 var intro = document.querySelector("#mainintro")
+var highscorename = document.querySelector("#highscorename")
+var highscoreScore = document.querySelector("#highscore_score")
 let questionNumber = 0
 let score = 0
 let quizQuestions = [
@@ -66,6 +68,7 @@ if (questionNumber < 3) {
 
     for(let i=0; i< choices.length; i++) {
         let choiceBtn = document.createElement("button");
+        choiceBtn.setAttribute("style", "width: 250px; height: 50px; font-size: 25px; margin: 8px;")
         choiceBtn.innerHTML = choices[i];
         choiceBtn.addEventListener("click", function(event){
             event.preventDefault();
@@ -113,7 +116,7 @@ if (questionNumber < 3) {
 function displayinitialspage() {
     startquizdiv.innerHTML = "";
     initialspage.style.display = "block";
-    finalscores.innerHIML = `${score} out of ${quizQuestions.length*10}`
+    finalscore.innerHTML = `${score} out of ${quizQuestions.length*10}`
 }
 
 submitbtn.addEventListener('click', function(event){
@@ -131,14 +134,15 @@ submitbtn.addEventListener('click', function(event){
     startOver.innerHTML = ("startOver");
 })
 
-highscores.addEventListener('click', function(event) {
+highscore.addEventListener('click', function(event) {
     console.log("TP")
 quizdiv.innerHTML = ""
 initialspage.innerHTML -""
-let results = localStorage.getitem("quiz_score")
+let results = localStorage.getItem("quiz_score")
 let obj = JSON.parse(results);
 console.log(obj)
-document.getElementById('highscorePage').innerHTML = obj.name;
+document.getElementById('highscorename').innerHTML = obj.name;
+document.getElementById('highscore_score').innerHTML = obj.score;
 })
 
 
@@ -146,6 +150,7 @@ header.setAttribute("style", "text-align : center;")
 header.style.marginTop = "200px";
 startbtn.setAttribute("style", "width : 200px; height : 30px;")
 intro.setAttribute("style", "font-size : 18px;")
+submitbtn.setAttribute("style", "width: 200px; margin-top: 10px;")
 
 function init() {
     quizTime()
