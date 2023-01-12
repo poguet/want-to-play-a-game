@@ -12,5 +12,5 @@ Java script has been a real challange to grasp for me completeing this challange
 <img width="1510" alt="Screenshot 2022-12-22 at 11 31 20 PM" src="https://user-images.githubusercontent.com/118129483/211991460-56e945f7-1cee-4a4d-8a8e-09e78d476112.png">
 
 ## link
-
+https://poguet.github.io/want-to-play-a-game/
 
